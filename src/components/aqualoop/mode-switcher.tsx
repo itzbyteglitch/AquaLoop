@@ -16,7 +16,7 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
     <div
       className={cn(
         "grid gap-2 rounded-2xl border border-border bg-card/70 p-1.5 backdrop-blur",
-        full ? "sm:grid-cols-3" : "grid-cols-3",
+        full ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-1 sm:grid-cols-3",
       )}
     >
       {modes.map((m) => {
