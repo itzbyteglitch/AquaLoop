@@ -354,17 +354,29 @@ npm run format    # Prettier --write
 
 ## Screenshots
 
-| Dashboard | Rainwater Tank | RO Reject Tank |
-|-----------|----------------|----------------|
-| ![Dashboard](docs/dashboard.png) | ![Rainwater Tank](docs/rainwater.png) | ![RO Reject Tank](docs/ro-reject.png) |
+### Dashboard
+![Dashboard](docs/dashboard.png)
 
-| Analytics | Recommendations | Alerts |
-|-----------|-----------------|--------|
-| ![Analytics](docs/analytics.png) | ![Recommendations](docs/recommendations.png) | ![Alerts](docs/alerts.png) |
+### Rainwater Tank
+![Rainwater Tank](docs/rainwater.png)
 
-| Devices | LaunchVerse |
-|---------|-------------|
-| ![Devices](docs/devices.png) | ![LaunchVerse](docs/launchverse.png) |
+### RO Reject Tank
+![RO Reject Tank](docs/ro-reject.png)
+
+### Analytics
+![Analytics](docs/analytics.png)
+
+### Recommendations
+![Recommendations](docs/recommendations.png)
+
+### Alerts
+![Alerts](docs/alerts.png)
+
+### Devices
+![Devices](docs/devices.png)
+
+### LaunchVerse
+![LaunchVerse](docs/launchverse.png)
 
 ---
 
