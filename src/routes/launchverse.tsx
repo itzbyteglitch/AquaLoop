@@ -97,25 +97,41 @@ function LaunchVersePage() {
         <h2 className="text-base font-semibold">Quick Links for Evaluation</h2>
         <div className="mt-4 flex flex-wrap gap-3">
           <Button variant="outline" asChild>
-            <a href="/" target="_blank" rel="noopener noreferrer">Live Demo (Dashboard)</a>
+            <a href="/" target="_blank" rel="noopener noreferrer">
+              Live Demo (Dashboard)
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/rainwater" target="_blank" rel="noopener noreferrer">Rainwater Tank Detail</a>
+            <a href="/rainwater" target="_blank" rel="noopener noreferrer">
+              Rainwater Tank Detail
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/ro-reject" target="_blank" rel="noopener noreferrer">RO Reject Tank Detail</a>
+            <a href="/ro-reject" target="_blank" rel="noopener noreferrer">
+              RO Reject Tank Detail
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/analytics" target="_blank" rel="noopener noreferrer">Analytics & Trends</a>
+            <a href="/analytics" target="_blank" rel="noopener noreferrer">
+              Analytics & Trends
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/recommendations" target="_blank" rel="noopener noreferrer">AI Recommendations</a>
+            <a href="/recommendations" target="_blank" rel="noopener noreferrer">
+              AI Recommendations
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="/help" target="_blank" rel="noopener noreferrer">Architecture & FAQ</a>
+            <a href="/help" target="_blank" rel="noopener noreferrer">
+              Architecture & FAQ
+            </a>
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://github.com/itzbyteglitch/AquaLoop" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/itzbyteglitch/AquaLoop"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="mr-1.5 h-3.5 w-3.5" />
               GitHub Repository
             </a>
