@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Trophy, Users, Lightbulb, Target, Rocket, Award, Github } from "lucide-react";
+import { Trophy, Lightbulb, Target, Rocket, Award, Users, Github } from "lucide-react";
 import { PageShell } from "@/components/aqualoop/page-shell";
 import { PageHeader } from "@/components/aqualoop/page-header";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Route = createFileRoute("/launchverse")({
   head: () => ({
@@ -174,7 +173,7 @@ function Highlight({
   title,
   desc,
 }: {
-  icon: typeof Trophy;
+  icon: typeof Rocket;
   title: string;
   desc: string;
 }) {
