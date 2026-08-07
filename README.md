@@ -354,15 +354,17 @@ npm run format    # Prettier --write
 
 ## Screenshots
 
-| Dashboard                     | Analytics                     | Recommendations                     |
-| ----------------------------- | ----------------------------- | ----------------------------------- |
-| ![Dashboard](docs/banner.png) | ![Analytics](docs/banner.png) | ![Recommendations](docs/banner.png) |
+| Dashboard | Rainwater Tank | RO Reject Tank |
+|-----------|----------------|----------------|
+| ![Dashboard](docs/dashboard.png) | ![Rainwater Tank](docs/rainwater.png) | ![RO Reject Tank](docs/ro-reject.png) |
 
-| Devices                     | Alerts                     | Settings                     |
-| --------------------------- | -------------------------- | ---------------------------- |
-| ![Devices](docs/banner.png) | ![Alerts](docs/banner.png) | ![Settings](docs/banner.png) |
+| Analytics | Recommendations | Alerts |
+|-----------|-----------------|--------|
+| ![Analytics](docs/analytics.png) | ![Recommendations](docs/recommendations.png) | ![Alerts](docs/alerts.png) |
 
-> _Placeholder images shown. Replace `docs/banner.png` with actual screenshots._
+| Devices | LaunchVerse |
+|---------|-------------|
+| ![Devices](docs/devices.png) | ![LaunchVerse](docs/launchverse.png) |
 
 ---
 
