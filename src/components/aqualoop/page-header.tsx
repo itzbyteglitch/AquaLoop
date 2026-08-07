@@ -18,9 +18,9 @@ export function PageHeader({
       className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border border-border bg-card/70 p-5 backdrop-blur sm:flex sm:flex-wrap sm:justify-between"
       style={{ backgroundImage: "var(--gradient-surface)" }}
     >
-      <div className="min-w-0">
+      <div className="min-w-0 overflow-hidden">
         <h1 className="truncate text-xl font-bold sm:text-2xl">{title}</h1>
-        <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
+        <p className="mt-1 text-sm text-muted-foreground break-words overflow-wrap-anywhere">{subtitle}</p>
       </div>
       {actions && <div className="flex shrink-0 flex-wrap items-center gap-2">{actions}</div>}
     </motion.header>
