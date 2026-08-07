@@ -15,6 +15,7 @@ import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as DevicesRouteImport } from './routes/devices'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as HistoryRouteImport } from './routes/history'
+import { Route as LaunchverseRouteImport } from './routes/launchverse'
 import { Route as MaintenanceRouteImport } from './routes/maintenance'
 import { Route as RainwaterRouteImport } from './routes/rainwater'
 import { Route as RecommendationsRouteImport } from './routes/recommendations'
@@ -51,6 +52,11 @@ const HistoryRoute = HistoryRouteImport.update({
   path: '/history',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LaunchverseRoute = LaunchverseRouteImport.update({
+  id: '/launchverse',
+  path: '/launchverse',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MaintenanceRoute = MaintenanceRouteImport.update({
   id: '/maintenance',
   path: '/maintenance',
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/devices': typeof DevicesRoute
   '/help': typeof HelpRoute
   '/history': typeof HistoryRoute
+  '/launchverse': typeof LaunchverseRoute
   '/maintenance': typeof MaintenanceRoute
   '/rainwater': typeof RainwaterRoute
   '/recommendations': typeof RecommendationsRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/devices': typeof DevicesRoute
   '/help': typeof HelpRoute
   '/history': typeof HistoryRoute
+  '/launchverse': typeof LaunchverseRoute
   '/maintenance': typeof MaintenanceRoute
   '/rainwater': typeof RainwaterRoute
   '/recommendations': typeof RecommendationsRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/devices': typeof DevicesRoute
   '/help': typeof HelpRoute
   '/history': typeof HistoryRoute
+  '/launchverse': typeof LaunchverseRoute
   '/maintenance': typeof MaintenanceRoute
   '/rainwater': typeof RainwaterRoute
   '/recommendations': typeof RecommendationsRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/devices'
     | '/help'
     | '/history'
+    | '/launchverse'
     | '/maintenance'
     | '/rainwater'
     | '/recommendations'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/devices'
     | '/help'
     | '/history'
+    | '/launchverse'
     | '/maintenance'
     | '/rainwater'
     | '/recommendations'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/devices'
     | '/help'
     | '/history'
+    | '/launchverse'
     | '/maintenance'
     | '/rainwater'
     | '/recommendations'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   DevicesRoute: typeof DevicesRoute
   HelpRoute: typeof HelpRoute
   HistoryRoute: typeof HistoryRoute
+  LaunchverseRoute: typeof LaunchverseRoute
   MaintenanceRoute: typeof MaintenanceRoute
   RainwaterRoute: typeof RainwaterRoute
   RecommendationsRoute: typeof RecommendationsRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/launchverse': {
+      id: '/launchverse'
+      path: '/launchverse'
+      fullPath: '/launchverse'
+      preLoaderRoute: typeof LaunchverseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/maintenance': {
       id: '/maintenance'
       path: '/maintenance'
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   DevicesRoute: DevicesRoute,
   HelpRoute: HelpRoute,
   HistoryRoute: HistoryRoute,
+  LaunchverseRoute: LaunchverseRoute,
   MaintenanceRoute: MaintenanceRoute,
   RainwaterRoute: RainwaterRoute,
   RecommendationsRoute: RecommendationsRoute,

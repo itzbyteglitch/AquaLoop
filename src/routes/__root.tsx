@@ -137,13 +137,18 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <SimulationProvider>
         <SidebarProvider>
-          <div className="flex min-h-svh">
+          <div className="flex min-h-svh flex-col">
             <AppSidebar />
             <SidebarInset>
               <Topbar />
               <main className="flex-1">
                 <Outlet />
               </main>
+              <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
+                <div className="mx-auto max-w-7xl px-4 py-3 text-center text-xs text-muted-foreground">
+                  AquaLoop © 2026 | Made by ItzByteGlitch
+                </div>
+              </footer>
             </SidebarInset>
           </div>
           <Toaster position="top-right" richColors />

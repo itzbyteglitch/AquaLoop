@@ -12,6 +12,8 @@ import {
   Settings,
   LifeBuoy,
   Droplets,
+  Github,
+  Trophy,
 } from "lucide-react";
 import {
   Sidebar,
@@ -47,6 +49,7 @@ const system = [
   { title: "Maintenance", url: "/maintenance", icon: Wrench },
   { title: "Settings", url: "/settings", icon: Settings },
   { title: "Help", url: "/help", icon: LifeBuoy },
+  { title: "LaunchVerse", url: "/launchverse", icon: Trophy },
 ] as const;
 
 export function AppSidebar() {
@@ -111,6 +114,15 @@ export function AppSidebar() {
           <p className="px-2 pb-2 text-[11px] leading-relaxed text-muted-foreground">
             Prototype build · simulated telemetry only
           </p>
+          <a
+            href="https://github.com/itzbyteglitch/AquaLoop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-2 py-2 text-[11px] text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Github className="h-3.5 w-3.5" />
+            <span>View on GitHub</span>
+          </a>
         </SidebarFooter>
       )}
     </Sidebar>

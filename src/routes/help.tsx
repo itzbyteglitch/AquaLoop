@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CloudRain, Cpu, Brain, Route as RouteIcon, ArrowRight } from "lucide-react";
+import { CloudRain, Cpu, Brain, Route as RouteIcon, ArrowRight, Github } from "lucide-react";
 import { PageShell } from "@/components/aqualoop/page-shell";
 import { PageHeader } from "@/components/aqualoop/page-header";
 import {
@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/help")({
   head: () => ({
@@ -150,6 +151,25 @@ function HelpPage() {
             </AccordionItem>
           ))}
         </Accordion>
+      </section>
+
+      <section className="card-soft p-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-base font-semibold">Report an Issue</h2>
+          <a
+            href="https://github.com/itzbyteglitch/AquaLoop/issues/new/choose"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button asChild variant="outline" size="sm">
+              <Github className="mr-1.5 h-3.5 w-3.5" />
+              Open on GitHub
+            </Button>
+          </a>
+        </div>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Found a bug or have a feature request? Open an issue on our GitHub repository.
+        </p>
       </section>
     </PageShell>
   );
