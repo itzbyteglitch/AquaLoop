@@ -9,27 +9,28 @@
 </div>
 
 <p align="center">
-  <a href="https://react.dev"><img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white" alt="React"></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white" alt="TypeScript"></a>
-  <a href="https://vite.dev"><img src="https://img.shields.io/badge/Vite-8.2-646CFF?logo=vite&logoColor=white" alt="Vite"></a>
-  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-4.2-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS"></a>
-  <a href="https://ui.shadcn.com"><img src="https://img.shields.io/badge/shadcn%2Fui-latest-000000?logo=shadcnui&logoColor=white" alt="shadcn/ui"></a>
-  <a href="https://recharts.org"><img src="https://img.shields.io/badge/Recharts-2.15-FF6B6B?logo=recharts&logoColor=white" alt="Recharts"></a>
-  <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-12.43-0055FF?logo=framer&logoColor=white" alt="Framer Motion"></a>
-  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-24-339933?logo=nodedotjs&logoColor=white" alt="Node.js"></a>
-  <a href="https://www.npmjs.com"><img src="https://img.shields.io/badge/npm-11-CB3837?logo=npm&logoColor=white" alt="npm"></a>
-  <a href="https://eslint.org"><img src="https://img.shields.io/badge/ESLint-9-4B32C3?logo=eslint&logoColor=white" alt="ESLint"></a>
-  <a href="https://prettier.io"><img src="https://img.shields.io/badge/Prettier-3.7-F7B93E?logo=prettier&logoColor=white" alt="Prettier"></a>
-  <a href="https://github.com"><img src="https://img.shields.io/badge/GitHub-Open_Source-181717?logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License"></a>
-  <img src="https://img.shields.io/badge/Status-Prototype-orange" alt="Status: Prototype">
-  <img src="https://img.shields.io/badge/IoT-Dashboard-blue" alt="IoT">
-  <img src="https://img.shields.io/badge/Sustainability-Water_Conservation-0d9488" alt="Sustainability">
-  <img src="https://img.shields.io/badge/LaunchVerse-Competition-8b5cf6" alt="LaunchVerse">
-  <img src="https://img.shields.io/badge/Open_Source-Ready-brightgreen" alt="Open Source Ready">
-  <img src="https://img.shields.io/badge/Responsive-Design-06b6d4" alt="Responsive">
-  <img src="https://img.shields.io/badge/Dark_Mode-Supported-374151" alt="Dark Mode">
-  <img src="https://img.shields.io/badge/Competition-Project-purple" alt="Competition Project">
+  <a href="https://react.dev"><img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white&style=for-the-badge" alt="React"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge" alt="TypeScript"></a>
+  <a href="https://vite.dev"><img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge" alt="Vite"></a>
+  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white&style=for-the-badge" alt="Tailwind CSS"></a>
+  <a href="https://ui.shadcn.com"><img src="https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white&style=for-the-badge" alt="shadcn/ui"></a>
+  <a href="https://recharts.org"><img src="https://img.shields.io/badge/Recharts-FF6B6B?logo=recharts&logoColor=white&style=for-the-badge" alt="Recharts"></a>
+  <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer&logoColor=white&style=for-the-badge" alt="Framer Motion"></a>
+  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white&style=for-the-badge" alt="Node.js"></a>
+  <a href="https://www.npmjs.com"><img src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white&style=for-the-badge" alt="npm"></a>
+  <a href="https://eslint.org"><img src="https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white&style=for-the-badge" alt="ESLint"></a>
+  <a href="https://prettier.io"><img src="https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=white&style=for-the-badge" alt="Prettier"></a>
+  <a href="https://pages.cloudflare.com"><img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?logo=cloudflare&logoColor=white&style=for-the-badge" alt="Cloudflare Pages"></a>
+  <a href="https://github.com"><img src="https://img.shields.io/badge/GitHub-Open_Source-181717?logo=github&logoColor=white&style=for-the-badge" alt="GitHub"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge" alt="Status: Prototype">
+  <img src="https://img.shields.io/badge/IoT-Dashboard-blue?style=for-the-badge" alt="IoT">
+  <img src="https://img.shields.io/badge/Sustainability-Water_Conservation-0d9488?style=for-the-badge" alt="Sustainability">
+  <img src="https://img.shields.io/badge/LaunchVerse-Competition-8b5cf6?style=for-the-badge" alt="LaunchVerse">
+  <img src="https://img.shields.io/badge/Open_Source-Ready-brightgreen?style=for-the-badge" alt="Open Source Ready">
+  <img src="https://img.shields.io/badge/Responsive-Design-06b6d4?style=for-the-badge" alt="Responsive">
+  <img src="https://img.shields.io/badge/Dark_Mode-Supported-374151?style=for-the-badge" alt="Dark Mode">
+  <img src="https://img.shields.io/badge/Competition-Project-purple?style=for-the-badge" alt="Competition Project">
 </p>
 
 ---
