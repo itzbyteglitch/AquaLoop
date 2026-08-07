@@ -150,7 +150,7 @@ function RootComponent() {
                     href="https://github.com/itzbyteglitch/AquaLoop"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
+                    className="font-medium underline underline-offset-2 hover:text-primary hover:no-underline transition-colors"
                   >
                     AquaLoop
                   </a>{" "}
@@ -159,7 +159,7 @@ function RootComponent() {
                     href="https://github.com/itzbyteglitch"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-primary transition-colors"
+                    className="font-medium underline underline-offset-2 hover:text-primary hover:no-underline transition-colors"
                   >
                     ItzByteGlitch
                   </a>
