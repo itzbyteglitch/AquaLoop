@@ -146,11 +146,21 @@ function RootComponent() {
               </main>
               <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
                 <div className="mx-auto max-w-7xl px-4 py-3 text-center text-xs text-muted-foreground">
-                  <a href="https://github.com/itzbyteglitch/AquaLoop" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  <a
+                    href="https://github.com/itzbyteglitch/AquaLoop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
                     AquaLoop
                   </a>{" "}
                   © 2026 | Made by{" "}
-                  <a href="https://github.com/itzbyteglitch" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  <a
+                    href="https://github.com/itzbyteglitch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
                     ItzByteGlitch
                   </a>
                 </div>
