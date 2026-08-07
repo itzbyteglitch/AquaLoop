@@ -156,16 +156,16 @@ function HelpPage() {
       <section className="card-soft p-6">
         <div className="flex items-center justify-between">
           <h2 className="text-base font-semibold">Report an Issue</h2>
-          <a
-            href="https://github.com/itzbyteglitch/AquaLoop/issues/new/choose"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button asChild variant="outline" size="sm">
+          <Button asChild variant="outline" size="sm">
+            <a
+              href="https://github.com/itzbyteglitch/AquaLoop/issues/new/choose"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="mr-1.5 h-3.5 w-3.5" />
               Open on GitHub
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
         <p className="mt-2 text-sm text-muted-foreground">
           Found a bug or have a feature request? Open an issue on our GitHub repository.

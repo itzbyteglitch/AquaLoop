@@ -96,46 +96,30 @@ function LaunchVersePage() {
       <section className="card-soft p-6">
         <h2 className="text-base font-semibold">Quick Links for Evaluation</h2>
         <div className="mt-4 flex flex-wrap gap-3">
-          <a href="/" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/">Live Demo (Dashboard)</a>
-            </Button>
-          </a>
-          <a href="/rainwater" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/rainwater">Rainwater Tank Detail</a>
-            </Button>
-          </a>
-          <a href="/ro-reject" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/ro-reject">RO Reject Tank Detail</a>
-            </Button>
-          </a>
-          <a href="/analytics" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/analytics">Analytics & Trends</a>
-            </Button>
-          </a>
-          <a href="/recommendations" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/recommendations">AI Recommendations</a>
-            </Button>
-          </a>
-          <a href="/help" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" asChild>
-              <a href="/help">Architecture & FAQ</a>
-            </Button>
-          </a>
-          <a
-            href="https://github.com/itzbyteglitch/AquaLoop"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="outline" asChild>
+          <Button variant="outline" asChild>
+            <a href="/" target="_blank" rel="noopener noreferrer">Live Demo (Dashboard)</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="/rainwater" target="_blank" rel="noopener noreferrer">Rainwater Tank Detail</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="/ro-reject" target="_blank" rel="noopener noreferrer">RO Reject Tank Detail</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="/analytics" target="_blank" rel="noopener noreferrer">Analytics & Trends</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="/recommendations" target="_blank" rel="noopener noreferrer">AI Recommendations</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="/help" target="_blank" rel="noopener noreferrer">Architecture & FAQ</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="https://github.com/itzbyteglitch/AquaLoop" target="_blank" rel="noopener noreferrer">
               <Github className="mr-1.5 h-3.5 w-3.5" />
               GitHub Repository
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </section>
 
