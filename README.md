@@ -41,22 +41,23 @@
 **AquaLoop** is an intelligent IoT dashboard that monitors two independent water loops — **rainwater harvesting** and **reverse-osmosis reject recovery** — with real-time telemetry, composite water-quality scoring, and explainable reuse recommendations.
 
 Buildings waste enormous volumes of water through two streams that rarely get recovered:
+
 - **Rainwater** from roof runoff (typically 5,000 L capacity in our model)
 - **RO reject water** from purification systems (typically 2,000 L capacity)
 
 AquaLoop models each loop as a fully isolated system with its own ESP32 sensor node, quality thresholds, and routing destinations. The dashboard provides:
 
-| Capability | Description |
-|------------|-------------|
-| **Live Monitoring** | Water level, pH, TDS, turbidity, flow rate, leak status, battery & WiFi health |
-| **Quality Scoring** | Composite 0–100 score blending pH deviation, TDS ceiling, turbidity, leak & device state |
-| **Smart Routing** | Independent valve control per loop: Irrigation, Toilet Flushing, Groundwater Recharge, Floor Cleaning, or Holding |
-| **AI Recommendations** | Explainable engine publishes destination, confidence %, reasoning, suggested action & expected benefit |
-| **Operating Modes** | Manual (you decide), Assisted (engine suggests, you confirm), Autonomous (safe routes apply automatically) |
-| **Historical Analytics** | Live charts, daily/weekly/monthly trends for level, temperature, TDS, pH, flow & savings |
-| **Alert System** | Critical/warning/info alerts for leaks, offline sensors, level extremes, TDS spikes, pH drift |
-| **Device Fleet** | ESP32 node health: firmware, uptime, sync status, remote restart / firmware update / blink LED |
-| **Maintenance** | Calibration, cleaning, filter replacement & tank/pump inspection checklists with progress tracking |
+| Capability               | Description                                                                                                       |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
+| **Live Monitoring**      | Water level, pH, TDS, turbidity, flow rate, leak status, battery & WiFi health                                    |
+| **Quality Scoring**      | Composite 0–100 score blending pH deviation, TDS ceiling, turbidity, leak & device state                          |
+| **Smart Routing**        | Independent valve control per loop: Irrigation, Toilet Flushing, Groundwater Recharge, Floor Cleaning, or Holding |
+| **AI Recommendations**   | Explainable engine publishes destination, confidence %, reasoning, suggested action & expected benefit            |
+| **Operating Modes**      | Manual (you decide), Assisted (engine suggests, you confirm), Autonomous (safe routes apply automatically)        |
+| **Historical Analytics** | Live charts, daily/weekly/monthly trends for level, temperature, TDS, pH, flow & savings                          |
+| **Alert System**         | Critical/warning/info alerts for leaks, offline sensors, level extremes, TDS spikes, pH drift                     |
+| **Device Fleet**         | ESP32 node health: firmware, uptime, sync status, remote restart / firmware update / blink LED                    |
+| **Maintenance**          | Calibration, cleaning, filter replacement & tank/pump inspection checklists with progress tracking                |
 
 > **Prototype notice:** This build runs a client-side simulation engine (`src/hooks/use-simulation.tsx`). All telemetry is generated in-browser — no physical hardware or backend API is required. The engine injects realistic sensor drift, random failures, and quality spikes to demonstrate the full dashboard behaviour.
 
@@ -82,17 +83,17 @@ AquaLoop models each loop as a fully isolated system with its own ESP32 sensor n
 
 ## Technology Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Frontend Framework** | React 19 with TanStack Start (file-based routing, SSR) |
-| **Language** | TypeScript 5.8 (strict mode) |
-| **Styling** | Tailwind CSS v4 + shadcn/ui components |
-| **Charts** | Recharts (area, line, bar, stacked) |
-| **Animation** | Framer Motion (page transitions, live updates) |
-| **Icons** | Lucide React |
-| **Package Manager** | npm |
-| **Build Tool** | Vite 8 + Nitro (node-server / cloudflare-module presets) |
-| **Linting** | ESLint 9 + TypeScript ESLint + Prettier |
+| Layer                  | Technology                                               |
+| ---------------------- | -------------------------------------------------------- |
+| **Frontend Framework** | React 19 with TanStack Start (file-based routing, SSR)   |
+| **Language**           | TypeScript 5.8 (strict mode)                             |
+| **Styling**            | Tailwind CSS v4 + shadcn/ui components                   |
+| **Charts**             | Recharts (area, line, bar, stacked)                      |
+| **Animation**          | Framer Motion (page transitions, live updates)           |
+| **Icons**              | Lucide React                                             |
+| **Package Manager**    | npm                                                      |
+| **Build Tool**         | Vite 8 + Nitro (node-server / cloudflare-module presets) |
+| **Linting**            | ESLint 9 + TypeScript ESLint + Prettier                  |
 
 ---
 
@@ -175,10 +176,12 @@ AquaLoop/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 20+
 - npm 10+
 
 ### Installation
+
 ```bash
 git clone <repository-url>
 cd AquaLoop
@@ -186,18 +189,21 @@ npm install
 ```
 
 ### Development
+
 ```bash
 npm run dev
 # Starts Vite + TanStack Start dev server at http://localhost:3000
 ```
 
 ### Production Build
+
 ```bash
 npm run build
 # Outputs to .output/ (Nitro node-server preset)
 ```
 
 ### Preview Production Build
+
 ```bash
 npm run preview
 # Serves client assets only (Vite preview)
@@ -205,12 +211,14 @@ npm run preview
 ```
 
 ### Start Production Server
+
 ```bash
 npm run start
 # Runs node .output/server/index.mjs on port 3000
 ```
 
 ### Linting & Formatting
+
 ```bash
 npm run lint      # ESLint
 npm run format    # Prettier --write
@@ -220,15 +228,15 @@ npm run format    # Prettier --write
 
 ## Screenshots
 
-| Dashboard | Analytics | Recommendations |
-|-----------|-----------|-----------------|
+| Dashboard                     | Analytics                     | Recommendations                     |
+| ----------------------------- | ----------------------------- | ----------------------------------- |
 | ![Dashboard](docs/banner.png) | ![Analytics](docs/banner.png) | ![Recommendations](docs/banner.png) |
 
-| Devices | Alerts | Settings |
-|---------|--------|----------|
+| Devices                     | Alerts                     | Settings                     |
+| --------------------------- | -------------------------- | ---------------------------- |
 | ![Devices](docs/banner.png) | ![Alerts](docs/banner.png) | ![Settings](docs/banner.png) |
 
-> *Placeholder images shown. Replace `docs/banner.png` with actual screenshots.*
+> _Placeholder images shown. Replace `docs/banner.png` with actual screenshots._
 
 ---
 
@@ -237,10 +245,12 @@ npm run format    # Prettier --write
 ### Problem Statement
 
 Urban buildings waste **millions of litres annually** through two streams that are almost never recovered:
+
 1. **Rainwater** — roof runoff goes straight to storm drains
 2. **RO reject water** — reverse-osmosis purification discharges 30–50% of input as concentrate
 
 Both streams are:
+
 - **Physically separate** — never mixed, different quality profiles
 - **Monitorable** — modern IoT sensors can measure pH, TDS, turbidity, level, flow, leaks
 - **Reusable** — with proper quality gating, both serve non-potable needs (irrigation, flushing, recharge)
@@ -248,6 +258,7 @@ Both streams are:
 ### Solution
 
 **AquaLoop** is an intelligent dashboard that:
+
 - **Models each loop independently** — rainwater and RO reject never share sensors, plumbing, or logic
 - **Scores water quality in real time** — a 0–100 composite of pH, TDS, turbidity, leak state, device health
 - **Generates explainable recommendations** — destination, confidence %, reasoning, action, benefit
@@ -256,13 +267,13 @@ Both streams are:
 
 ### Innovation
 
-| Aspect | Detail |
-|--------|--------|
-| **Dual-loop isolation** | Hard separation in data model & UI — no cross-contamination risk |
-| **Quality composite** | Novel weighted formula: pH deviation × 9 + TDS/ceiling × 38 + turbidity/ceiling × 26 + leak penalty + offline penalty |
-| **Recommendation engine** | Rule-based with confidence decay (leaks, low volume, stale data reduce confidence) |
-| **Explainable output** | Every recommendation includes: headline, destination, confidence %, reasoning bullets, suggested action, expected benefit |
-| **Simulation-first** | Full client-side engine enables zero-hardware demos, CI testing, rapid iteration |
+| Aspect                    | Detail                                                                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Dual-loop isolation**   | Hard separation in data model & UI — no cross-contamination risk                                                          |
+| **Quality composite**     | Novel weighted formula: pH deviation × 9 + TDS/ceiling × 38 + turbidity/ceiling × 26 + leak penalty + offline penalty     |
+| **Recommendation engine** | Rule-based with confidence decay (leaks, low volume, stale data reduce confidence)                                        |
+| **Explainable output**    | Every recommendation includes: headline, destination, confidence %, reasoning bullets, suggested action, expected benefit |
+| **Simulation-first**      | Full client-side engine enables zero-hardware demos, CI testing, rapid iteration                                          |
 
 ### Impact
 
@@ -294,26 +305,26 @@ Water scarcity affects **4+ billion people** at least one month per year. Buildi
 
 ### Competition Highlights
 
-| Criterion | AquaLoop |
-|-----------|----------|
-| **Technical depth** | Full-stack SSR, simulation engine, domain types, 11 routes, animated UI |
-| **Real-world relevance** | Addresses UN SDG 6 (Clean Water) & 11 (Sustainable Cities) |
-| **Open-source readiness** | MIT license, zero proprietary deps, npm scripts, reproducible builds |
-| **Demoability** | Runs instantly with `npm run dev` — no cloud account, no hardware |
-| **Extensibility** | Clean separation: UI ↔ simulation ↔ hardware abstraction |
+| Criterion                 | AquaLoop                                                                |
+| ------------------------- | ----------------------------------------------------------------------- |
+| **Technical depth**       | Full-stack SSR, simulation engine, domain types, 11 routes, animated UI |
+| **Real-world relevance**  | Addresses UN SDG 6 (Clean Water) & 11 (Sustainable Cities)              |
+| **Open-source readiness** | MIT license, zero proprietary deps, npm scripts, reproducible builds    |
+| **Demoability**           | Runs instantly with `npm run dev` — no cloud account, no hardware       |
+| **Extensibility**         | Clean separation: UI ↔ simulation ↔ hardware abstraction                |
 
 ---
 
 ## Project Team
 
-| Name | Role |
-|------|------|
-| **Aditya** | Team Leader |
+| Name         | Role                                      |
+| ------------ | ----------------------------------------- |
+| **Aditya**   | Team Leader                               |
 | **Divyansh** | Software Development · Technical Director |
-| **Anmol** | Project Director |
-| **Nitika** | Design & Sketching |
-| **Pema** | Design & Sketching |
-| **Advaita** | Presentation & Judge Representative |
+| **Anmol**    | Project Director                          |
+| **Nitika**   | Design & Sketching                        |
+| **Pema**     | Design & Sketching                        |
+| **Advaita**  | Presentation & Judge Representative       |
 
 ---
 
@@ -334,6 +345,7 @@ Water scarcity affects **4+ billion people** at least one month per year. Buildi
 We welcome contributions! Please follow these guidelines:
 
 ### Branch Naming
+
 - `feature/<short-description>` — new functionality
 - `fix/<issue-id-or-description>` — bug fixes
 - `docs/<section>` — documentation updates
@@ -341,15 +353,19 @@ We welcome contributions! Please follow these guidelines:
 - `chore/<task>` — maintenance (deps, configs, CI)
 
 ### Commit Messages
+
 Follow [Conventional Commits](https://www.conventionalcommits.org/):
+
 ```
 <type>(<scope>): <imperative description>
 
 <body if needed>
 ```
+
 Types: `feat`, `fix`, `docs`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`.
 
 ### Pull Requests
+
 1. Fork & create a feature branch
 2. Ensure `npm run lint` and `npm run build` pass
 3. Add tests for new logic (simulation engine, recommendation rules)
@@ -357,11 +373,13 @@ Types: `feat`, `fix`, `docs`, `refactor`, `perf`, `test`, `chore`, `build`, `ci`
 5. Request review — maintainers will respond within 48h
 
 ### Issue Reporting
+
 - Use GitHub Issues with the appropriate template
 - Include: Node version, OS, steps to reproduce, expected vs actual behaviour
 - For simulation logic bugs: describe the scenario (tank, readings, mode)
 
 ### Code Style
+
 - TypeScript strict mode (no `any`, no unused locals/params)
 - Named exports, no default exports
 - Components in `components/aqualoop/` for domain, `components/ui/` for primitives
@@ -391,6 +409,6 @@ Inspiration and knowledge drawn from:
 
 **Built with care for a sustainable water future.**
 
-*AquaLoop — Smart Water Today, Sustainable Tomorrow*
+_AquaLoop — Smart Water Today, Sustainable Tomorrow_
 
 </div>

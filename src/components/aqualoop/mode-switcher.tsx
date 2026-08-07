@@ -16,7 +16,7 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
     <div
       className={cn(
         "flex flex-wrap gap-2 rounded-2xl border border-border bg-card/70 p-1.5 backdrop-blur",
-        full && "justify-center"
+        full && "justify-center",
       )}
     >
       {modes.map((m) => {
@@ -42,7 +42,11 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
               <m.icon className="h-4 w-4 shrink-0" />
               <span className="truncate text-sm font-medium">{m.label}</span>
             </span>
-            {full && <span className="relative mt-0.5 block text-center text-[11px] opacity-80">{m.hint}</span>}
+            {full && (
+              <span className="relative mt-0.5 block text-center text-[11px] opacity-80">
+                {m.hint}
+              </span>
+            )}
           </button>
         );
       })}

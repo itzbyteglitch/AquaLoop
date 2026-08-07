@@ -20,7 +20,9 @@ export function PageHeader({
     >
       <div className="min-w-0 overflow-hidden">
         <h1 className="truncate text-xl font-bold sm:text-2xl">{title}</h1>
-        <p className="mt-1 text-sm text-muted-foreground break-words overflow-wrap-anywhere">{subtitle}</p>
+        <p className="mt-1 text-sm text-muted-foreground break-words overflow-wrap-anywhere">
+          {subtitle}
+        </p>
       </div>
       {actions && (
         <div className="flex shrink-0 flex-wrap items-center gap-2 justify-start sm:justify-end">
