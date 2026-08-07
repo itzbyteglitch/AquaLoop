@@ -15,8 +15,8 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
   return (
     <div
       className={cn(
-        "grid gap-2 rounded-2xl border border-border bg-card/70 p-1.5 backdrop-blur",
-        full ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-1 sm:grid-cols-3",
+        "flex flex-wrap gap-2 rounded-2xl border border-border bg-card/70 p-1.5 backdrop-blur",
+        full && "justify-center"
       )}
     >
       {modes.map((m) => {
@@ -26,9 +26,10 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
             key={m.id}
             onClick={() => setMode(m.id)}
             className={cn(
-              "relative rounded-xl px-3 py-2 text-left transition-colors",
+              "relative flex-1 min-w-[80px] max-w-[140px] rounded-xl px-3 py-2 text-left transition-colors shrink-0",
               active ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground",
             )}
+            style={{ flexBasis: full ? "calc(33.333% - 16px)" : "auto" }}
           >
             {active && (
               <motion.span
@@ -37,11 +38,11 @@ export function ModeSwitcher({ full = false }: { full?: boolean }) {
                 transition={{ type: "spring", stiffness: 320, damping: 30 }}
               />
             )}
-            <span className="relative flex items-center gap-2">
+            <span className="relative flex items-center justify-center gap-2">
               <m.icon className="h-4 w-4 shrink-0" />
               <span className="truncate text-sm font-medium">{m.label}</span>
             </span>
-            {full && <span className="relative mt-0.5 block text-[11px] opacity-80">{m.hint}</span>}
+            {full && <span className="relative mt-0.5 block text-center text-[11px] opacity-80">{m.hint}</span>}
           </button>
         );
       })}
