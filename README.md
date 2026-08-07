@@ -307,8 +307,8 @@ Water scarcity affects **4+ billion people** at least one month per year. Buildi
 
 | Name | Role |
 |------|------|
-| **Aditya** | Team Leader · Technical Director · Software Development |
-| **Divyansh** | Software Development |
+| **Aditya** | Team Leader |
+| **Divyansh** | Software Development · Technical Director |
 | **Anmol** | Project Director |
 | **Nitika** | Design & Sketching |
 | **Pema** | Design & Sketching |

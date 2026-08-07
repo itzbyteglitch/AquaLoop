@@ -53,7 +53,7 @@
   </g>
 
   <!-- Center content group -->
-  <g transform="translate(600 260)">
+  <g transform="translate(600 200)">
     <!-- Outer ring (animated loop suggestion) -->
     <circle r="135" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.35" filter="url(#glow)"/>
     <!-- Middle ring -->
