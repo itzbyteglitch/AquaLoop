@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="55%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(600 245)">
+    <path d="M0 -72 C0 -72 -70 18 -70 80 a70 70 0 0 0 140 0 C70 18 0 -72 0 -72 Z" fill="url(#drop)"/>
+    <path d="M0 -14 a80 80 0 1 1 -57 21" fill="none" stroke="#ffffff" stroke-opacity="0.8" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <text x="600" y="410" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="96" font-weight="bold" fill="#ffffff">AquaLoop</text>
+  <text x="600" y="475" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="36" fill="#cffafe" letter-spacing="2">Smart Water Today, Sustainable Tomorrow</text>
+
+  <g transform="translate(600 560)">
+    <rect x="-140" y="0" width="64" height="10" rx="5" fill="#ffffff" fill-opacity="0.7"/>
+    <rect x="-38" y="0" width="64" height="10" rx="5" fill="#ffffff" fill-opacity="0.7"/>
+    <rect x="64" y="0" width="64" height="10" rx="5" fill="#ffffff" fill-opacity="0.7"/>
+  </g>
+</svg>
