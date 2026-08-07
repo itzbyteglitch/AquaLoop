@@ -55,8 +55,8 @@ coverage
 .wrangler/
 .dev.vars
 
-# Package lockfiles (optional - uncomment if you want to commit package-lock.json)
-# package-lock.json
-# pnpm-lock.yaml
-# yarn.lock
+# Package lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
 AGENTS.md
