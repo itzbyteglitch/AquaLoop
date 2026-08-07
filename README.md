@@ -63,6 +63,131 @@ AquaLoop models each loop as a fully isolated system with its own ESP32 sensor n
 
 ---
 
+## System Architecture
+
+### High-Level Overview
+
+```mermaid
+graph TB
+    subgraph "Source Layer"
+        R[Rainwater Tank<br/>5,000 L]
+        O[RO Reject Tank<br/>2,000 L]
+    end
+
+    subgraph "Sensing Layer"
+        SN1[ESP32 Node RW-01<br/>pH · TDS · Turbidity<br/>Level · Flow · Leak]
+        SN2[ESP32 Node RO-02<br/>pH · TDS · Turbidity<br/>Level · Flow · Leak]
+    end
+
+    subgraph "Decision Layer"
+        QS[Quality Scoring<br/>Composite 0–100]
+        RE[Recommendation Engine<br/>Rules + Confidence]
+    end
+
+    subgraph "Actuation Layer"
+        V1[Rainwater Valve]
+        V2[RO Reject Valve]
+    end
+
+    subgraph "Destinations"
+        D1[Irrigation]
+        D2[Toilet Flushing]
+        D3[Groundwater Recharge]
+        D4[Floor Cleaning]
+        D5[Holding / No Use]
+    end
+
+    R -.-> SN1
+    O -.-> SN2
+    SN1 --> QS
+    SN2 --> QS
+    QS --> RE
+    RE --> V1
+    RE --> V2
+    V1 --> D1
+    V1 --> D2
+    V1 --> D3
+    V2 --> D3
+    V2 --> D4
+    V1 --> D5
+    V2 --> D5
+
+    style R fill:#1e3a8a,color:#fff
+    style O fill:#0d9488,color:#fff
+    style SN1 fill:#1e40af,color:#fff
+    style SN2 fill:#0f766e,color:#fff
+    style QS fill:#7c2d12,color:#fff
+    style RE fill:#7c2d12,color:#fff
+    style V1 fill:#92400e,color:#fff
+    style V2 fill:#92400e,color:#fff
+```
+
+### Data Flow
+
+```mermaid
+sequenceDiagram
+    participant Sensor as ESP32 Sensor
+    participant Sim as Simulation Engine
+    participant QS as Quality Scorer
+    participant RE as Recommendation Engine
+    participant UI as Dashboard UI
+    participant Valve as Actuation Valve
+
+    loop Every 2-5 seconds
+        Sensor->>Sim: Telemetry (pH, TDS, Level, Flow, Leak)
+        Sim->>QS: Raw readings per tank
+        QS-->>Sim: Quality Score (0-100)
+        Sim->>RE: Tank state + score
+        RE-->>Sim: Destination + Confidence + Reasoning
+        Sim->>UI: Update state (tanks, recs, alerts)
+        UI->>Valve: Route command (if Autonomous)
+    end
+
+    Note over Sim,UI: Simulation injects drift, failures, spikes
+    Note over RE,Valve: Manual/Assisted/Autonomous modes
+```
+
+### Recommendation Engine Decision Flow
+
+```mermaid
+flowchart TD
+    Start([New Sensor Reading]) --> Offline{Sensor\nOnline?}
+    Offline -->|No| Block[Block Routing\nSeverity: Blocked\nConfidence: 96%]
+    Offline -->|Yes| HighTDS{TDS >\nThreshold?}
+    HighTDS -->|Yes| Block
+    HighTDS -->|No| HighTurb{Turbidity >\nThreshold?}
+    HighTurb -->|Yes| Caution1[Hold / No Use\nSeverity: Caution\nConfidence: 84%]
+    HighTurb -->|No| BadPH{pH Outside\n6.4-8.3?}
+    BadPH -->|Yes| Caution2[Groundwater Recharge\nSeverity: Caution\nConfidence: 79%]
+    BadPH -->|No| TankType{Tank Type?}
+    TankType -->|Rainwater| RainTDS{TDS < 90?}
+    RainTDS -->|Yes| Good1[Irrigation\nSeverity: Good\nConfidence: 93%]
+    RainTDS -->|No| Good2[Toilet Flushing\nSeverity: Good\nConfidence: 93%]
+    TankType -->|RO Reject| ROTDS{TDS < 800?}
+    ROTDS -->|Yes| Good3[Toilet Flushing\nSeverity: Good\nConfidence: 88%]
+    ROTDS -->|No| Good4[Groundwater Recharge\nSeverity: Good\nConfidence: 88%]
+
+    Block --> Adjust[Adjust Confidence\n- Leak: -18%\n- Low Level: -10%]
+    Caution1 --> Adjust
+    Caution2 --> Adjust
+    Good1 --> Adjust
+    Good2 --> Adjust
+    Good3 --> Adjust
+    Good4 --> Adjust
+    Adjust --> Publish[Publish Recommendation\n+ Destination + Confidence\n+ Reasoning + Action + Benefit]
+
+    style Block fill:#ef4444,color:#fff
+    style Caution1 fill:#f59e0b,color:#fff
+    style Caution2 fill:#f59e0b,color:#fff
+    style Good1 fill:#22c55e,color:#fff
+    style Good2 fill:#22c55e,color:#fff
+    style Good3 fill:#22c55e,color:#fff
+    style Good4 fill:#22c55e,color:#fff
+    style Publish fill:#3b82f6,color:#fff
+```
+
+---
+
 ## Features
 
 - ✅ Live dashboard with system health, water savings & alert summary
@@ -274,6 +399,54 @@ Both streams are:
 | **Recommendation engine** | Rule-based with confidence decay (leaks, low volume, stale data reduce confidence)                                        |
 | **Explainable output**    | Every recommendation includes: headline, destination, confidence %, reasoning bullets, suggested action, expected benefit |
 | **Simulation-first**      | Full client-side engine enables zero-hardware demos, CI testing, rapid iteration                                          |
+
+### Operating Modes
+
+```mermaid
+stateDiagram-v2
+    [*] --> Manual
+    Manual --> Assisted : User enables assistance
+    Assisted --> Manual : User disables assistance
+    Assisted --> Autonomous : User enables autonomy
+    Autonomous --> Assisted : User disables autonomy
+    Autonomous --> Manual : User takes full control
+
+    state Manual {
+        [*] --> UserDecides
+        UserDecides --> ValveAction : User selects destination
+        ValveAction --> [*]
+        note right of UserDecides
+            User picks destination for each loop
+            System only measures and warns
+        end note
+    }
+
+    state Assisted {
+        [*] --> EngineSuggests
+        EngineSuggests --> UserConfirms : Recommendation published
+        UserConfirms --> ValveAction : User clicks Confirm
+        UserConfirms --> EngineSuggests : User ignores / overrides
+        ValveAction --> [*]
+        note right of EngineSuggests
+            Engine proposes best destination
+            with confidence score
+            Nothing moves until user confirms
+        end note
+    }
+
+    state Autonomous {
+        [*] --> AutoRoutes
+        AutoRoutes --> ValveAction : Safe rec applied automatically
+        AutoRoutes --> UserOverride : User can override anytime
+        UserOverride --> AutoRoutes
+        ValveAction --> [*]
+        note right of AutoRoutes
+            Safe recommendations applied
+            the moment they change
+            Routing animation shows active path
+        end note
+    }
+```
 
 ### Impact
 
