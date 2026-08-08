@@ -21,7 +21,6 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
-  SidebarHeader,
   SidebarFooter,
   SidebarMenu,
   SidebarMenuButton,
@@ -88,23 +87,8 @@ export function AppSidebar() {
     </SidebarGroup>
   );
 
-  return (
+return (
     <Sidebar collapsible="icon" variant="inset">
-      <SidebarHeader>
-        <Link to="/" className="flex items-center gap-3 px-2 py-3">
-          <span className="gradient-brand grid h-9 w-9 shrink-0 place-items-center rounded-xl shadow-[var(--shadow-glow)]">
-            <Droplets className="h-5 w-5 text-primary-foreground" />
-          </span>
-          {!collapsed && (
-            <span className="min-w-0">
-              <span className="block truncate font-display text-base font-bold">AquaLoop</span>
-              <span className="block truncate text-[11px] text-muted-foreground">
-                Smart Water Today
-              </span>
-            </span>
-          )}
-        </Link>
-      </SidebarHeader>
       <SidebarContent>
         {renderGroup("Monitoring", monitoring)}
         {renderGroup("Intelligence", intelligence)}
@@ -126,7 +110,7 @@ export function AppSidebar() {
           </a>
         </SidebarFooter>
       )}
-
+      
       <SidebarFooter className="flex justify-start p-2">
         <SidebarTrigger className="h-8 w-8 rounded-lg hover:bg-accent" />
       </SidebarFooter>
