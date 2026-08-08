@@ -14,6 +14,7 @@ import {
   Droplets,
   Github,
   Trophy,
+  PanelLeft,
 } from "lucide-react";
 import {
   Sidebar,
@@ -125,6 +126,10 @@ export function AppSidebar() {
           </a>
         </SidebarFooter>
       )}
+
+      <SidebarFooter className="flex justify-start p-2">
+        <SidebarTrigger className="h-8 w-8 rounded-lg hover:bg-accent" />
+      </SidebarFooter>
     </Sidebar>
   );
 }

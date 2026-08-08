@@ -141,11 +141,11 @@ function RootComponent() {
             <AppSidebar />
             <SidebarInset>
               <Topbar />
-              <main className="flex-1">
+              <main className="flex-1 w-full">
                 <Outlet />
               </main>
               <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
-                <div className="mx-auto max-w-7xl px-4 py-3 text-center text-xs text-muted-foreground">
+                <div className="mx-auto max-w-full px-4 py-3 text-center text-xs text-muted-foreground">
                   <a
                     href="https://github.com/itzbyteglitch/AquaLoop"
                     target="_blank"
