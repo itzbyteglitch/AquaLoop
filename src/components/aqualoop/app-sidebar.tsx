@@ -89,7 +89,7 @@ export function AppSidebar() {
   );
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant="inset">
       <SidebarHeader>
         <Link to="/" className="flex items-center gap-3 px-2 py-3">
           <span className="gradient-brand grid h-9 w-9 shrink-0 place-items-center rounded-xl shadow-[var(--shadow-glow)]">
