@@ -145,23 +145,14 @@ function RootComponent() {
                 <Outlet />
               </div>
               <footer className="border-t border-border bg-card/50 backdrop-blur-sm flex-shrink-0">
-                <div className="mx-auto max-w-full px-4 py-3 text-center text-xs text-muted-foreground">
-                  <a
-                    href="https://github.com/itzbyteglitch/AquaLoop"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium underline underline-offset-2 hover:text-primary hover:no-underline transition-colors"
-                  >
-                    AquaLoop
-                  </a>{" "}
-                  © 2026 | Made by{" "}
+                <div className="mx-auto max-w-full px-4 py-3 text-center">
                   <a
                     href="https://github.com/itzbyteglitch"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium underline underline-offset-2 hover:text-primary hover:no-underline transition-colors"
+                    className="text-xs font-semibold text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
                   >
-                    ItzByteGlitch
+                    © 2026 | Made by ItzByteGlitch (Divyansh Singh Patel)
                   </a>
                 </div>
               </footer>
