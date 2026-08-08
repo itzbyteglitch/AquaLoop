@@ -354,7 +354,7 @@ npm run format    # Prettier --write
 
 ## Screenshots
 
-> Live preview: [e52beebc.aqualoop-e8n.pages.dev](https://e52beebc.aqualoop-e8n.pages.dev)
+> Live preview: [aqualoop.itzbyteglitch.qzz.io](https://aqualoop.itzbyteglitch.qzz.io)
 
 ### Dashboard
 ![Dashboard](docs/dashboard.png)
