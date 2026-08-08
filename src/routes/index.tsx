@@ -54,7 +54,7 @@ function Dashboard() {
         actions={<ModeSwitcher />}
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard
           icon={Recycle}
           label="Water recovered"
@@ -87,19 +87,19 @@ function Dashboard() {
         />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-8 lg:grid-cols-3">
         <WeatherWidget />
         <div className="lg:col-span-2">
           <RoutingDiagram />
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         <RecommendationCard rec={recommendations.rainwater} compact />
         <RecommendationCard rec={recommendations.roReject} compact />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         <ChartCard title="Water Level History" description="Both tanks, percentage full">
           <TrendLines
             data={merged}
@@ -114,7 +114,7 @@ function Dashboard() {
         </ChartCard>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-8 lg:grid-cols-3">
         <TankCard tankId="rainwater" />
         <TankCard tankId="roReject" />
         <EventLog limit={6} title="Live Event Log" />

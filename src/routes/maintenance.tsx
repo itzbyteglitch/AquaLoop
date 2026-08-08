@@ -92,7 +92,7 @@ function MaintenancePage() {
         <Progress value={(completed / all.length) * 100} className="mt-3 h-2" />
       </section>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         {groups.map((g) => (
           <section key={g.title} className="card-soft p-5">
             <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2">

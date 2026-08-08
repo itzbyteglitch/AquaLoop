@@ -44,7 +44,7 @@ function DevicesPage() {
         subtitle="Simulated ESP32 nodes — one per water loop, no shared plumbing."
       />
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         {devices.map((device, i) => {
           const tank = tanks[device.tankId];
           return (

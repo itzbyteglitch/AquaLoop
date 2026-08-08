@@ -45,7 +45,7 @@ function LaunchVersePage() {
 
       <section className="card-soft p-6">
         <h2 className="text-base font-semibold">Problem & Innovation</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-4">
             <h3 className="flex items-center gap-2 text-sm font-semibold text-destructive">
               <Target className="h-4 w-4" />
@@ -73,7 +73,7 @@ function LaunchVersePage() {
 
       <section className="card-soft p-6">
         <h2 className="text-base font-semibold">Technical Highlights</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <Highlight icon={Rocket} title="Full-Stack SSR" desc="TanStack Start + Nitro" />
           <Highlight icon={Award} title="Type-Safe" desc="TypeScript strict mode" />
           <Highlight icon={Users} title="Responsive UI" desc="Tailwind v4 + shadcn/ui" />
@@ -83,7 +83,7 @@ function LaunchVersePage() {
 
       <section className="card-soft p-6">
         <h2 className="text-base font-semibold">Team</h2>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <TeamCard name="Aditya" role="Team Leader" />
           <TeamCard name="Divyansh" role="Software Development · Technical Director" />
           <TeamCard name="Anmol" role="Project Director" />
