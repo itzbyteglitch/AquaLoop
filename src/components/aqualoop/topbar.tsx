@@ -3,12 +3,10 @@ import { Moon, Sun, Bell, Gauge, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useSimulation } from "@/hooks/use-simulation";
-import { Link } from "@tanstack/react-router";
 
 export function Topbar() {
   const { now, settings, setSettings, alerts, systemHealth } = useSimulation();
   const unread = alerts.filter((a) => !a.acknowledged).length;
-  const time = new Date(now);
 
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-border bg-background/80 px-4 py-3 backdrop-blur-xl">

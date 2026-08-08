@@ -14,7 +14,6 @@ import {
   Droplets,
   Github,
   Trophy,
-  PanelLeft,
 } from "lucide-react";
 import {
   Sidebar,
@@ -27,6 +26,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 import { useSimulation } from "@/hooks/use-simulation";
