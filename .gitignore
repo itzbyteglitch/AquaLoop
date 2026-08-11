@@ -1,3 +1,10 @@
+# Android build artifacts
+android/build
+android/app/build
+android/.gradle
+android/**/*.apk
+android/**/*.aab
+
 # Logs
 logs
 *.log
