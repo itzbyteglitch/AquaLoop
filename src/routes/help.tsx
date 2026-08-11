@@ -101,7 +101,7 @@ function HelpPage() {
         </div>
       </section>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-12 lg:grid-cols-2">
         <section className="card-soft p-6">
           <h2 className="text-base font-semibold">Operating Modes</h2>
           <div className="mt-4 space-y-4 text-sm">

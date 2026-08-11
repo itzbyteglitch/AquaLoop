@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 9.0.1" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of Gradle than 9.1.0 is available: 9.7.0">
+        <fix-replace
+            description="Update to 9.7.0"
+            oldString="9.1.0"
+            replacement="9.7.0"
+            priority="0"/>
+        <location
+            file="../gradle/wrapper/gradle-wrapper.properties"
+            line="3"
+            column="17"
+            startOffset="81"
+            endLine="3"
+            endColumn="80"
+            endOffset="144"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.application than 9.0.1 is available: 9.3.1">
+        <fix-replace
+            description="Replace with 9.3.1"
+            family="Update versions"
+            oldString="9.0.1"
+            replacement="9.3.1"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="2"
+            column="23"
+            startOffset="33"
+            endLine="2"
+            endColumn="30"
+            endOffset="40"/>
+        <map>
+            <entry
+                name="coordinate"
+                string="com.android.application"/>
+            <entry
+                name="revision"
+                string="9.3.1"/>
+        </map>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.18.0 is available: 1.19.0">
+        <fix-replace
+            description="Change to 1.19.0"
+            family="Update versions"
+            oldString="1.18.0"
+            replacement="1.19.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="3"
+            column="16"
+            startOffset="56"
+            endLine="3"
+            endColumn="24"
+            endOffset="64"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.10.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.10.0"
+            replacement="2.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="4"
+            column="21"
+            startOffset="85"
+            endLine="4"
+            endColumn="29"
+            endOffset="93"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.10.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.10.0"
+            replacement="2.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="4"
+            column="21"
+            startOffset="85"
+            endLine="4"
+            endColumn="29"
+            endOffset="93"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.10.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.10.0"
+            replacement="2.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="4"
+            column="21"
+            startOffset="85"
+            endLine="4"
+            endColumn="29"
+            endOffset="93"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.compose:compose-bom than 2026.03.01 is available: 2026.06.01">
+        <fix-replace
+            description="Change to 2026.06.01"
+            family="Update versions"
+            oldString="2026.03.01"
+            replacement="2026.06.01"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="6"
+            column="22"
+            startOffset="143"
+            endLine="6"
+            endColumn="34"
+            endOffset="155"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation3:navigation3-runtime than 1.0.1 is available: 1.1.5">
+        <fix-replace
+            description="Change to 1.1.5"
+            family="Update versions"
+            oldString="1.0.1"
+            replacement="1.1.5"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="14"
+            column="12"
+            startOffset="333"
+            endLine="14"
+            endColumn="19"
+            endOffset="340"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation3:navigation3-ui than 1.0.1 is available: 1.1.5">
+        <fix-replace
+            description="Change to 1.1.5"
+            family="Update versions"
+            oldString="1.0.1"
+            replacement="1.1.5"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="14"
+            column="12"
+            startOffset="333"
+            endLine="14"
+            endColumn="19"
+            endOffset="340"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-navigation3 than 2.10.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.10.0"
+            replacement="2.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="15"
+            column="26"
+            startOffset="366"
+            endLine="15"
+            endColumn="34"
+            endOffset="374"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.10.2 is available: 1.11.0">
+        <fix-replace
+            description="Change to 1.11.0"
+            family="Update versions"
+            oldString="1.10.2"
+            replacement="1.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="11"
+            column="14"
+            startOffset="278"
+            endLine="11"
+            endColumn="22"
+            endOffset="286"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlin.plugin.compose than 2.3.20 is available: 2.4.10">
+        <fix-replace
+            description="Change to 2.4.10"
+            family="Update versions"
+            oldString="2.3.20"
+            replacement="2.4.10"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="13"
+            column="10"
+            startOffset="313"
+            endLine="13"
+            endColumn="18"
+            endOffset="321"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlin.plugin.serialization than 2.3.20 is available: 2.4.10">
+        <fix-replace
+            description="Change to 2.4.10"
+            family="Update versions"
+            oldString="2.3.20"
+            replacement="2.4.10"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="13"
+            column="10"
+            startOffset="313"
+            endLine="13"
+            endColumn="18"
+            endOffset="321"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.7.3 is available: 1.11.0">
+        <fix-replace
+            description="Change to 1.11.0"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="20"
+            column="24"
+            startOffset="483"
+            endLine="20"
+            endColumn="31"
+            endOffset="490"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json-okio than 1.7.3 is available: 1.11.0">
+        <fix-replace
+            description="Change to 1.11.0"
+            family="Update versions"
+            oldString="1.7.3"
+            replacement="1.11.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="20"
+            column="24"
+            startOffset="483"
+            endLine="20"
+            endColumn="31"
+            endOffset="490"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-datetime than 0.6.1 is available: 0.8.0">
+        <fix-replace
+            description="Change to 0.8.0"
+            family="Update versions"
+            oldString="0.6.1"
+            replacement="0.8.0"
+            priority="0"/>
+        <location
+            file="../gradle/libs.versions.toml"
+            line="21"
+            column="19"
+            startOffset="509"
+            endLine="21"
+            endColumn="26"
+            endOffset="516"/>
+    </incident>
+
+</incidents>

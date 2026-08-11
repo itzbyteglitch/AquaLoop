@@ -60,7 +60,7 @@ function Analytics() {
           <TabsTrigger value="monthly">Monthly</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="live" className="mt-8 grid gap-8 xl:grid-cols-2">
+        <TabsContent value="live" className="mt-8 grid gap-12 xl:grid-cols-2">
           <ChartCard title="Water Level History" description="Both tanks, percentage full">
             <TrendLines
               data={merged}

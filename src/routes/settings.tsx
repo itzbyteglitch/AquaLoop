@@ -38,7 +38,7 @@ function SettingsPage() {
         subtitle="Everything here controls the frontend simulation only."
       />
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-12 lg:grid-cols-2">
         <section className="card-soft space-y-6 p-5">
           <h2 className="text-base font-semibold">Appearance & Behaviour</h2>
 

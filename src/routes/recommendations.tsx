@@ -38,7 +38,7 @@ function RecommendationsPage() {
         actions={<ModeSwitcher />}
       />
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-12 lg:grid-cols-2">
         <RecommendationCard rec={recommendations.rainwater} />
         <RecommendationCard rec={recommendations.roReject} />
       </div>

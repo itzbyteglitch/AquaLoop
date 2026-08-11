@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.aqualoop.simulator.SimulatorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-08T15:10:20.204Z" hostname="codespaces-508c58" time="0.025">
+  <properties/>
+  <testcase name="qualityScore_offlinePenalized" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.001"/>
+  <testcase name="initialTank_isWithinRanges" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.003"/>
+  <testcase name="generateHistory_returnsRequestedPoints" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.004"/>
+  <testcase name="stepReading_staysWithinRanges" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.005"/>
+  <testcase name="buildRecommendation_healthyRainwaterGoesToReuse" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.001"/>
+  <testcase name="formatAgo_returnsHumanUnits" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.006"/>
+  <testcase name="buildRecommendation_offlineIsBlocked" classname="com.example.aqualoop.simulator.SimulatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

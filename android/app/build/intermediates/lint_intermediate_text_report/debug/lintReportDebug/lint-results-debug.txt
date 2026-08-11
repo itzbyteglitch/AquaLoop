@@ -1,0 +1,114 @@
+/workspaces/AquaLoop/android/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 9.1.0 is available: 9.7.0 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-9.1.0-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:2: Warning: A newer version of com.android.application than 9.0.1 is available: 9.3.1 [AndroidGradlePluginVersion]
+androidGradlePlugin = "9.0.1"
+                      ~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:3: Warning: A newer version of androidx.core:core-ktx than 1.18.0 is available: 1.19.0 [GradleDependency]
+androidxCore = "1.18.0"
+               ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:4: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.10.0 is available: 2.11.0 [GradleDependency]
+androidxLifecycle = "2.10.0"
+                    ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:4: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.10.0 is available: 2.11.0 [GradleDependency]
+androidxLifecycle = "2.10.0"
+                    ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:4: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.10.0 is available: 2.11.0 [GradleDependency]
+androidxLifecycle = "2.10.0"
+                    ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:6: Warning: A newer version of androidx.compose:compose-bom than 2026.03.01 is available: 2026.06.01 [GradleDependency]
+androidxComposeBom = "2026.03.01"
+                     ~~~~~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:14: Warning: A newer version of androidx.navigation3:navigation3-runtime than 1.0.1 is available: 1.1.5 [GradleDependency]
+nav3Core = "1.0.1"
+           ~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:14: Warning: A newer version of androidx.navigation3:navigation3-ui than 1.0.1 is available: 1.1.5 [GradleDependency]
+nav3Core = "1.0.1"
+           ~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:15: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-navigation3 than 2.10.0 is available: 2.11.0 [GradleDependency]
+lifecycleViewmodelNav3 = "2.10.0"
+                         ~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:11: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+coroutines = "1.10.2"
+             ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:13: Warning: A newer version of org.jetbrains.kotlin.plugin.compose than 2.3.20 is available: 2.4.10 [NewerVersionAvailable]
+kotlin = "2.3.20"
+         ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:13: Warning: A newer version of org.jetbrains.kotlin.plugin.serialization than 2.3.20 is available: 2.4.10 [NewerVersionAvailable]
+kotlin = "2.3.20"
+         ~~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:20: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.7.3 is available: 1.11.0 [NewerVersionAvailable]
+kotlinxSerialization = "1.7.3"
+                       ~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:20: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json-okio than 1.7.3 is available: 1.11.0 [NewerVersionAvailable]
+kotlinxSerialization = "1.7.3"
+                       ~~~~~~~
+/workspaces/AquaLoop/android/gradle/libs.versions.toml:21: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-datetime than 0.6.1 is available: 0.8.0 [NewerVersionAvailable]
+kotlinxDatetime = "0.6.1"
+                  ~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+/workspaces/AquaLoop/android/app/src/main/res/xml/backup_rules.xml:8: Warning: The resource R.xml.backup_rules appears to be unused [UnusedResources]
+<full-backup-content>
+^
+/workspaces/AquaLoop/android/app/src/main/res/xml/data_extraction_rules.xml:6: Warning: The resource R.xml.data_extraction_rules appears to be unused [UnusedResources]
+<data-extraction-rules>
+^
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 18 warnings

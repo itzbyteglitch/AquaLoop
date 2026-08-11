@@ -60,7 +60,7 @@ function AlertsPage() {
         {filters.map((f) => {
           const list = f.id === "all" ? alerts : alerts.filter((a) => a.severity === f.id);
           return (
-            <TabsContent key={f.id} value={f.id} className="mt-8 space-y-4">
+            <TabsContent key={f.id} value={f.id} className="mt-8 space-y-6">
               <AnimatePresence initial={false}>
                 {list.map((a) => (
                   <AlertRow key={a.id} alert={a} />
